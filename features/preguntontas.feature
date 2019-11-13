@@ -10,8 +10,8 @@ Scenario: Inicio partida
 
 Scenario: Respondo correctamente pregunta 1 
   Given inicio partida 
-  When selecciono opcion 1
+  When selecciono opcion 0
   And click boton Responder 
-  Then debo ver "CORRECTO!!"
+  Then debo ver "ES CORRECTO"
 
   
