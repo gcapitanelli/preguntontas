@@ -19,12 +19,17 @@ def run
   @@partida.incrementarPreguntaActual
   preguntaActual = @@partida.getPreguntaActual
 
-  @total = preguntaActual
+  if preguntaActual>5
+    erb :fin
+  else
+    @total = preguntaActual
 
-  @@partida.cargarPreguntas preguntaActual
-
-  @pregunta = @@partida.getPreguntonta
-  @opciones = @@partida.getOpciones
-  @puntaje = @@partida.getPuntaje
-  erb :pregunta
+    @@partida.cargarPreguntas preguntaActual
+  
+    @pregunta = @@partida.getPreguntonta
+    @opciones = @@partida.getOpciones
+    @puntaje = @@partida.getPuntaje
+    erb :pregunta
+  end
+  
 end
