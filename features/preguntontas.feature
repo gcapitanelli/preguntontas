@@ -6,12 +6,13 @@ Scenario: Ver pantalla principal
 
 Scenario: Inicio partida 
   Given inicio partida
-  Then debo ver pregunta 1)
+  Then debo ver "Pregunta 1"
 
 Scenario: Respondo correctamente pregunta 1 
   Given inicio partida 
-  When selecciono opcion 0
+  When selecciono 1
   And click boton Responder 
-  Then debo ver "BIEN"
+  Then debo ver "Puntaje: 1"
 
-  
+
+

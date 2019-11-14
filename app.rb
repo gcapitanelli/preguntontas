@@ -14,6 +14,10 @@ end
 
 post '/pregunta' do
    @@partida.validar params["rta1"].to_i
+  @pregunta = @@partida.getPreguntonta
+  @opciones = @@partida.getOpciones
+	@contador = @@partida.contador
+  	erb :pregunta
 end
 
 post '/siguiente' do

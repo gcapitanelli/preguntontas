@@ -1,15 +1,18 @@
 <h1>Preguntas</h1>
 
-<form method= "post" action="/pregunta1">
+<form method= "post" action="/pregunta">
   
-  1) <%= @pregunta %>
-  <br><br>
-
-  <input type="radio" name="rta1" value="0"> <%= @opciones[0] %><br>
-  <input type="radio" name="rta1" value="1"> <%= @opciones[1] %><br>  
-  <input type="radio" name="rta1" value="2"> <%= @opciones[2] %><br>
-  <input type="radio" name="rta1" value="3"> <%= @opciones[3] %><br> 
+  Pregunta 1 <%= @pregunta %>
   <br>
-  <input name="responder" type="submit" value="Responder" >  
+<br>  1 - <%= @opciones[0] %>
+<br>  2 -  <%= @opciones[1] %>
+<br>  3 -  <%= @opciones[2] %> 
+<br>  4 - <%= @opciones[3] %> 
 
+<br> Respuesta: <input name="respuesta" type="text"> <input type="submit" value="Responder">
+<br> Puntaje: <%= @contador %>
+</form>
+
+<form method="post" action="/siguiente">
+<input name="siguiente" type="submit" value="Siguiente" >  
 </form>
