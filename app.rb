@@ -14,13 +14,11 @@ get '/nuevaPartida' do
 end
 
 post '/pregunta' do
-
-  puts  params["respuesta"].to_i
   @@partida.validar params["respuesta"].to_i
   @pregunta = @@partida.getPreguntonta
   @opciones = @@partida.getOpciones
-	@contador = @@partida.contador
-  	erb :pregunta
+  @contador = @@partida.contador
+  erb :pregunta
 end
 
 post '/siguiente' do
@@ -29,6 +27,7 @@ post '/siguiente' do
   @@partida.cargarPreguntas preguntaActual
   @pregunta = @@partida.getPreguntonta
   @opciones = @@partida.getOpciones
+  @contador = @@partida.contador
   erb :pregunta 
 end
 

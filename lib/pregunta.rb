@@ -20,23 +20,23 @@ class Pregunta
 		  when 1 then
         @preguntonta = "Según Carlitos Balá ¿Que gusto tiene la sal?"
         @opciones = ["Salado", "Dulce", "Amargo", "Agridulce"]
-        @correcta = 0
+        @correcta = 1
       when 2 then
         @preguntonta = "¿De que color es el caballo blanco de San Martin?"
         @opciones = ["Verde", "Rojo", "Blanco", "Purpura"]
-        @correcta = 2 
-		  when 3 then
-				    @preguntonta = "¿Cuánta leche da una vaca en su vida?"
-				    @opciones = ["Nada", "Mucha", "Poca", "Lo mismo que en bajada"]
-				    @correcta = 3 
- 			when 4 then
-				    @preguntonta = "¿De que color es la yerba?"
-				    @opciones = ["Blanca", "Amarilla", "Verde", "Rosa"]
-				    @correcta = 2
- 			when 5 then
-				    @preguntonta = "¿?"
-				    @opciones = ["Nada", "Mucha", "Poca", "Lo mismo que en bajada"]
-				    @correcta = 0        
+        @correcta = 3 
+     when 3 then
+	    @preguntonta = "¿Cuánta leche da una vaca en su vida?"
+	    @opciones = ["Nada", "Mucha", "Poca", "Lo mismo que en bajada"]
+	    @correcta = 4 
+	when 4 then
+	    @preguntonta = "¿De que color es la yerba?"
+	    @opciones = ["Blanca", "Amarilla", "Verde", "Rosa"]
+	    @correcta = 3
+	when 5 then
+	    @preguntonta = "¿?"
+	    @opciones = ["Nada", "Mucha", "Poca", "Lo mismo que en bajada"]
+	    @correcta = 1        
     end
   end 
 end

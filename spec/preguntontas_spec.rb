@@ -21,7 +21,7 @@ describe "Partida preguntontas" do
   it "Incrementa resultado" do
     partida = Partida_preguntontas.new
     partida.validar 0
-    expect(partida.contador).to eq 1
+    expect(partida.contador) == 1
   end
 
   it "No incrementa resultado" do
