@@ -1,17 +1,24 @@
-<h1>Preguntontas</h1>
+<div class="p-3 mb-2 bg-primary text-white">
+<div class="text-primary">Preguntas</div>
 
 <form method= "post" action="/siguiente">
-Pregunta <%= @total %>: <%= @pregunta %>
+<div class="form-group">
+<div class="d-inline p-2 bg-primary text-white">
+<b>Pregunta <%= @total %>: <%= @pregunta %> </b>
+</div>
 <br>
 <br>  1 - <%= @opciones[0] %>
 <br>  2 - <%= @opciones[1] %>
-<br>  3 - <%= @opciones[2] %> 
-<br>  4 - <%= @opciones[3] %> 
+<br>  3 - <%= @opciones[2] %>
+<br>  4 - <%= @opciones[3] %>
 
 <br>
 <br>
-Respuesta: <input name="respuesta" type="text">
-<input type="submit" value="Siguiente">
+</div>
+</div>
+Respuesta: <input name="respuesta" type="text" size="5">
+ <button type="submit" class="btn btn-outline-primary">siguiente</button>
+
 <br>
 <br>Puntaje: <%= @puntaje %> / <%= @total-1 %>
 
