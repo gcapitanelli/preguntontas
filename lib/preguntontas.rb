@@ -2,28 +2,40 @@ require './lib/pregunta.rb'
 
 class Partida_preguntontas
   def initialize
-    @resultado = 0
-    @pregunta1 = Pregunta.new   
+    @resultado = ""
+    @contador = 0
+    @pregunta = Pregunta.new  
+    @preguntaActual = 1
   end
 
   def resultado
     @resultado 
   end
 
+  def contador
+    @contador 
+  end
+
   def getPreguntonta
-    @pregunta1.getPreguntonta
+    @pregunta.getPreguntonta
   end
 
   def getOpciones
-    @pregunta1.getOpciones
+    @pregunta.getOpciones
+  end
+
+  def cargarPreguntas nroPregunta
+    @pregunta.cargarPreguntas nroPregunta
   end
 
   def validar (respuesta)
-    if respuesta == @pregunta1.getCorrecta
-      return "BIEN"
+    if respuesta == @pregunta.getCorrecta
+      @contador +=1
+      @resultado = "BIEN"
     else 
-      return "MAL #{respuesta.class} #{@pregunta1.getCorrecta.class}"
+      @resultado = "MAL"
+    end
+    return @resultado
   end
-end
 
 end
