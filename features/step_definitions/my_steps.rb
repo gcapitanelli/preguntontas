@@ -24,8 +24,13 @@ When(/^selecciono (\d+)$/) do |opcion|
 end
 
 When(/^respuesta correcta$/) do
-  last_response.body.should = "Puntaje=1"
+  last_response.body.should = "Puntaje :1"
 end
+
+Given(/^click boton Siguiente$/) do
+  click_button("Siguiente")
+end
+
 
 
 
