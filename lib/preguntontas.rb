@@ -3,7 +3,7 @@ require './lib/pregunta.rb'
 class Partida_preguntontas
   
   def initialize
-    @pregunta = Pregunta.new 
+    @pregunta = Pregunta.new
     @resultado = ""
     @preguntaActual = 0
     @puntaje = 0
@@ -23,6 +23,10 @@ class Partida_preguntontas
 
   def getPuntaje
     @puntaje
+  end
+
+  def resetPuntaje
+    @puntaje = 0
   end
 
   def getPreguntonta
