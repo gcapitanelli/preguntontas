@@ -10,6 +10,11 @@ get '/nuevaPartida' do
   run
 end
 
+get '/segundaPartida' do
+  @puntaje = @@partida.resetPuntaje
+  run
+end
+
 post '/siguiente' do
   @@partida.validar params["respuesta"].to_i
   run
@@ -19,7 +24,9 @@ def run
   @@partida.incrementarPreguntaActual
   preguntaActual = @@partida.getPreguntaActual
 
-  if preguntaActual>5
+  if preguntaActual>10
+    @total = preguntaActual
+    @puntaje = @@partida.getPuntaje
     erb :fin
   else
     @total = preguntaActual
