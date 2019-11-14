@@ -16,6 +16,14 @@ class Partida_preguntontas
     @contador 
   end
 
+  def preguntaActual
+    @preguntaActual 
+  end
+
+  def incrementarPreguntaActual
+    @preguntaActual += 1
+  end
+
   def getPreguntonta
     @pregunta.getPreguntonta
   end
