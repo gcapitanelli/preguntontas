@@ -1,18 +1,18 @@
-<h1>Preguntas</h1>
+<h1>Preguntontas</h1>
 
-<form method= "post" action="/pregunta">
-  
-  Pregunta 1 <%= @pregunta %>
-  <br>
+<form method= "post" action="/siguiente">
+Pregunta: <%= @pregunta %>
+<br>
 <br>  1 - <%= @opciones[0] %>
-<br>  2 -  <%= @opciones[1] %>
-<br>  3 -  <%= @opciones[2] %> 
+<br>  2 - <%= @opciones[1] %>
+<br>  3 - <%= @opciones[2] %> 
 <br>  4 - <%= @opciones[3] %> 
 
-<br> Respuesta: <input name="respuesta" type="text"> <input type="submit" value="Responder">
-<br> Puntaje: <%= @contador %>
-</form>
+<br>
+<br>
+Respuesta: <input name="respuesta" type="text">
+<input type="submit" value="Siguiente">
+<br>
+<br>Puntaje: <%= @puntaje %> / <%= @total-1 %>
 
-<form method="post" action="/siguiente">
-<input name="siguiente" type="submit" value="Siguiente" >  
 </form>

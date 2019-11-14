@@ -1,27 +1,28 @@
 require './lib/pregunta.rb'
 
 class Partida_preguntontas
+  
   def initialize
+    @pregunta = Pregunta.new 
     @resultado = ""
-    @contador = 0
-    @pregunta = Pregunta.new  
-    @preguntaActual = 1
+    @preguntaActual = 0
+    @puntaje = 0
   end
 
-  def resultado
+  def getResultado
     @resultado 
   end
 
-  def contador
-    @contador 
-  end
-
-  def preguntaActual
+  def getPreguntaActual
     @preguntaActual 
   end
 
   def incrementarPreguntaActual
     @preguntaActual += 1
+  end
+
+  def getPuntaje
+    @puntaje
   end
 
   def getPreguntonta
@@ -36,9 +37,9 @@ class Partida_preguntontas
     @pregunta.cargarPreguntas nroPregunta
   end
 
-  def validar (respuesta)
-    if respuesta == @pregunta.getCorrecta
-      @contador +=1
+  def validar respuestaElegida
+    if (respuestaElegida-1) == @pregunta.getCorrecta
+      @puntaje +=1
       @resultado = "BIEN"
     else 
       @resultado = "MAL"

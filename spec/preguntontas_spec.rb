@@ -3,31 +3,31 @@ require './lib/preguntontas.rb'
 describe "Partida preguntontas" do
   it "Arranca la  partida" do
     partida = Partida_preguntontas.new
-    expect(partida.contador).to eq 0
+    expect(partida.getPuntaje).to eq 0
   end
 
   it "Respuesta correcta" do
     partida = Partida_preguntontas.new
     partida.validar 0
-    expect(partida.resultado) == "BIEN"
+    expect(partida.getResultado) == "BIEN"
   end
 
   it "Respuesta incorrecta" do
     partida = Partida_preguntontas.new
     partida.validar 3
-    expect(partida.resultado) == "MAL"
+    expect(partida.getResultado) == "MAL"
   end
 
   it "Incrementa resultado" do
     partida = Partida_preguntontas.new
     partida.validar 0
-    expect(partida.contador) == 1
+    expect(partida.getPuntaje) == 1
   end
 
   it "No incrementa resultado" do
     partida = Partida_preguntontas.new
     partida.validar 3
-    expect(partida.contador).to eq 0
+    expect(partida.getPuntaje).to eq 0
   end
 
   it "Cargar nueva pregunta" do

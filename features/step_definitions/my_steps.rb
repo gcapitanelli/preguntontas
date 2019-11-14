@@ -15,8 +15,8 @@ Then(/^debo ver pregunta (\d+)\)$/) do |arg1|
   last_response.body.should =~ /#{arg1}/m
 end
 
-When (/^click boton Responder$/) do
-  click_button("Responder")
+When (/^click boton Siguiente$/) do
+  click_button("Siguiente")
 end
 
 When(/^selecciono (\d+)$/) do |opcion|
@@ -26,11 +26,3 @@ end
 When(/^respuesta correcta$/) do
   last_response.body.should = "Puntaje :1"
 end
-
-Given(/^click boton Siguiente$/) do
-  click_button("Siguiente")
-end
-
-
-
-
