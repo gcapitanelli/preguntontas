@@ -4,7 +4,7 @@
 <form method= "post" action="/siguiente">
 <div class="form-group">
 <div class="d-inline p-2 bg-primary text-white">
-<b>Pregunta <%= @total %>: <%= @pregunta %> </b>
+<b>Pregunta <%= @total %>: <%= @pregunta %> <b>
 </div>
 <br>
 <br>  1 - <%= @opciones[0] %>
@@ -17,7 +17,7 @@
 </div>
 </div>
 Respuesta: <input name="respuesta" type="text" size="5">
- <button type="submit" class="btn btn-outline-primary">siguiente</button>
+ <input type="submit" value="Siguiente" class="btn btn-outline-primary"/>
 
 <br>
 <br>Puntaje: <%= @puntaje %> / <%= @total-1 %>
